@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<style>
+#canvas1 {
+  border: 1px solid #333;
+}
+</style>
+
+<body>
+
+<canvas id="canvas1" width="300" height="300">Your browser doesn't support canvas.</canvas>
+
+<script>
+  var canvas1 = document.getElementById("canvas1");
+  var context = canvas1.getContext("2d");
+
+  context.fillStyle = "#030";
+  context.fillRect(10, 20, 30, 40);
+
+  context.globalAlpha=0.5;
+
+  context.fillStyle = "#090"; 
+  context.fillRect(30, 40, 50, 60); 
+</script>
+
+</body>
+
+</html>
