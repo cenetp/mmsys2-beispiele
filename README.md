@@ -1,2 +1,2 @@
 # mmsys2-beispiele
-Einfache Code-Beispiele für die funktionale Animation
+Einfache Code-Beispiele für funktionale Web-Animationen
