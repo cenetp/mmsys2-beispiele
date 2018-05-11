@@ -6,7 +6,7 @@ var keyframes = [
   { opacity: 0.3, width: '25px', left: '400px' },
   { opacity: 0, width: '0', left: '525px' }
 ];
-// Konfigurations-Array
+// Konfigurationsobjekt
 var config = {
   iterations: Infinity,
   duration: 700,
