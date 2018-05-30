@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+#outer {
+  width: 600px; height: 600px;
+  background: #eee; border: 1px solid #ccc;
+  position: relative;
+}
+#inner {
+  color: #fff; width: 100px; height: 100px;
+  margin: 20px 50px; background: #090;
+  /*transition: all 0.6s ease-out;*/
+  border-radius: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/*#inner:hover {
+  top: 50px;
+  transform: scale(2);
+}*/
+#inner {
+  animation-name: circle;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes circle {
+  0% {top: 350px; left: 150px;}
+  30% {top: 200px; left: 375px;}
+  65% {top: 20px; left: 50px;}
+  100% {top: 350px; left: 150px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<p id="inner">.</p>
+</div>
+</body>
+</html>
