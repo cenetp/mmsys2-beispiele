@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<script src="bhive.js"></script>
+
+<style>
+#canvas1 {
+  border: 1px solid #333;
+}
+</style>
+
+<body>
+
+<h1>Welcher Hund passt zu mir?</h1>
+
+<canvas id="canvas1" width="600" height="450">Your browser doesn't support canvas.</canvas>
+
+<script>
+labels = ['Schottischer Terrier', 'Bernhardiner', 'Dackel', 'Chow-Chow'];
+new RGraph.HBar({
+  id: 'canvas1',
+  data: [20, 10, 40, 30],
+  options: {
+    backgroundGrid: false,
+    axes: true,
+    xaxisLabels: true,
+    labelsAbove: true,
+    labelsAboveUnitsPost: '%',
+    colors: ['orange'],
+    shadow: false
+  }
+}).on('draw', function (obj) {
+  var coords = obj.coords;
+  for (var i=0; i<coords.length; ++i) {
+    RGraph.text2(obj, {
+      text:   labels[i],
+      x:      coords[i][0] + 10,
+      y:      coords[i][1] + (coords[i][3] / 2),
+      valign: 'center',
+      bold:   true,
+      color:  'black'
+    });
+  }
+}).grow();
+</script>
+
+</body>
+
+</html>
